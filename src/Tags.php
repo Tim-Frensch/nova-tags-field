@@ -119,7 +119,7 @@ class Tags extends Field
             $tags = $tags->where('type', $this->meta()['type']);
         }
 
-        return $tags->map(function (Tag $tag) {
+        return $tags->map(function ($tag) {
             return e($tag->name);
         })->values();
     }
